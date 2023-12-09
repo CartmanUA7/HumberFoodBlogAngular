@@ -1,0 +1,46 @@
+.editCommentModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.editCommentModalHeader {
+  font-size: 18px;
+  width: 100%;
+  resize: none;
+  overflow: scroll;
+  margin-bottom: 10px;
+}
+
+.editCommentModalHeader::-webkit-scrollbar {
+  display: none;
+}
+
+.editCommentActions {
+  justify-content: space-around;
+}
+
+.editCommentModalButton {
+  color: white;
+  padding: 10px 50px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.editCommentModalButtonYes {
+  background-color: teal;
+}
+
+.editCommentModalButtonNo {
+  background-color: tomato;;
+}

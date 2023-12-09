@@ -1,0 +1,30 @@
+<div class="login">
+  <span class="loginTitle">Login</span>
+  <form class="loginForm" (ngSubmit)="handleLogin(loginForm)" #loginForm="ngForm">
+    <label>Email</label>
+    <input
+      class="loginInput"
+      type="text"
+      placeholder="Enter your email..."
+      [(ngModel)]="email"
+      name="email"
+    />
+    <div *ngIf="emailError" class="error">{{ emailError }}</div>
+
+    <label>Password</label>
+    <input
+      class="loginInput"
+      type="password"
+      placeholder="Enter your password..."
+      [(ngModel)]="password"
+      name="password"
+    />
+    <div *ngIf="passwordError" class="error">{{ passwordError }}</div>
+
+    <input type="submit" value="Login" class="loginButton" />
+  </form>
+  <button class="loginRegisterButton" (click)="handleRegisterClick()">
+    Register
+  </button>
+  <div *ngIf="loginError" class="error">{{ loginError }}</div> 
+</div>

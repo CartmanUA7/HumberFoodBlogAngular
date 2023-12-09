@@ -1,0 +1,40 @@
+<div class="top">
+  <div class="topCenter">
+    <ul class="topList">
+      <li class="topListItem">
+        <a class="link" routerLink="/">HOME</a>
+      </li>
+      <li class="topListItem">
+        <a class="link" routerLink="/about">ABOUT</a>
+      </li>
+      <li class="topListItem">CONTACT</li>
+      <li class="topListItem">
+        <a class="link" routerLink="/write">WRITE</a>
+      </li>
+      @if (isLoggedIn()) {
+        <li class="topListItem">
+          <a class="link" (click)="handleLogout()">LOGOUT</a>
+        </li>
+      } @else {
+        <li class="topListItem">
+          <a class="link" routerLink="/login">LOGIN</a>
+        </li>
+        <li class="topListItem">
+          <a class="link" routerLink="/register">REGISTER</a>
+        </li>
+      }
+    </ul>
+  </div>
+  <div class="topRight">
+    @if (isLoggedIn()) {
+      <a class="link" routerLink="/userProfile">
+        <img
+          class="topImg"
+          src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+          alt=""
+        />
+      </a>
+    }
+    <i class="topSearchIcon fa fa-search"></i>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="commentWrapper">
+  <div class="commentInfo">
+    <span class="commentAuthor">Author: {{ comment.authorName }}</span>
+    <span class="commentDate">{{ comment.postTime | date }}</span>
+  </div>
+  @if (user && comment && user._id == comment.author) {
+  <div class="commentEdit">
+    <div class="commentIcon commentIconEdit fa fa-edit" (click)="openEditDialog()"></div>
+    <div class="commentIcon commentIconDelete fa fa-trash-alt" (click)="openDeleteDialog()"></div>
+  </div>
+  }
+  <p class="commentContent">{{ comment.content }}</p>
+  <div class="commentLikes">
+    <p class='commentIcon fa fa-heart' [ngClass]="liked" (click)="handleLike()"></p>
+    <p>{{ comment.likes ? comment.likes.length : 0 }}</p>
+  </div>
+</div>

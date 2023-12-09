@@ -1,0 +1,53 @@
+<div class="register">
+  <span class="registerTitle">Register</span>
+  <form class="registerForm" (ngSubmit)="handleRegister(registerForm)" #registerForm="ngForm">
+    <label>First Name</label>
+    <input
+      class="registerInput"
+      type="text"
+      placeholder="Enter your first name..."
+      [(ngModel)]="firstName"
+      name="firstName"
+    />
+    <div *ngIf="firstNameError" class="error">{{ firstNameError }}</div>
+
+    <label>Last Name</label>
+    <input
+      class="registerInput"
+      type="text"
+      placeholder="Enter your last name..."
+      [(ngModel)]="lastName"
+      name="lastName"
+    />
+    <div *ngIf="lastNameError" class="error">{{ lastNameError }}</div>
+
+    <label>Email</label>
+    <input
+      class="registerInput"
+      type="text"
+      placeholder="Enter your email..."
+      [(ngModel)]="email"
+      name="email"
+    />
+    <div *ngIf="emailError" class="error">{{ emailError }}</div>
+
+    <label>Password</label>
+    <input
+      class="registerInput"
+      type="password"
+      placeholder="Enter your password..."
+      [(ngModel)]="password"
+      name="password"
+    />
+    <div *ngIf="passwordError" class="error">{{ passwordError }}</div>
+
+    <input
+      value="Register"
+      type="submit"
+      class="registerButton"
+    />
+  </form> 
+  <button class="registerLoginButton" (click)="handleLoginClick()">
+    Login
+  </button>
+</div>

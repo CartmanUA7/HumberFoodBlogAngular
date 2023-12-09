@@ -1,0 +1,23 @@
+<div class="editCommentModal">
+  <textarea
+    required
+    type="text"
+    cols="40"
+    rows="5"
+    [(ngModel)]="contentValue"
+    class="editCommentModalHeader"></textarea>
+  <div mat-dialog-actions class="editCommentActions">
+    <button
+      class="editCommentModalButton editCommentModalButtonYes"
+      (click)="handleEdit()"
+    >
+      Save
+    </button>
+    <button
+      class="editCommentModalButton editCommentModalButtonNo"
+      mat-dialog-close
+    >
+      Cancel
+    </button>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+.commentWrapper {
+  padding: 20px 20px 0 20px;
+}
+
+.commentInfo {
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #be9656;
+  font-family: "Varela Round", Arial, Helvetica, sans-serif;
+}
+
+.commentAuthor {
+  margin-left: 5px;
+}
+
+.commentEdit {
+  float: right;
+  font-size: 16px;
+}
+
+.commentContent {
+  color: #666;
+  font-size: 16px;
+}
+
+.commentLikes {
+  display: flex;
+  font-size: 16px;
+  color: #be9656;
+  font-family: "Varela Round", Arial, Helvetica, sans-serif;
+  align-items: center;
+}
+
+.commentIcon {
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.commentLikes > p {
+  margin: 0;
+}
+
+.commentIconEdit {
+  font-size: 24px;
+  color: teal;
+}
+.commentIconDelete {
+  font-size: 24px;
+  color: tomato;
+}

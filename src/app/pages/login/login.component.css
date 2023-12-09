@@ -1,0 +1,102 @@
+/* Default styles for larger screens */
+.login {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.5)
+  ),
+  url("https://images.pexels.com/photos/768473/pexels-photo-768473.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-size: cover;
+  font-size: 16px; /* Default font size for larger screens */
+}
+
+.loginTitle {
+  font-size: 50px;
+}
+
+.loginForm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input and label styles remain the same for all screens */
+
+.loginInput {
+  padding: 10px;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+.loginInput:focus {
+  outline: none;
+}
+
+.loginButton {
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: lightcoral;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.loginRegisterButton {
+  position: absolute;
+  bottom: 10px;
+  left: 37em;
+  background-color: teal;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  color: white;
+  border-radius: 10px;
+}
+.error {
+  color: red; /* Add this line to make the error message red */
+  margin-top: 5px; /* Adjust margin as needed */
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 992px) {
+  .login {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .loginTitle {
+    font-size: 40px;
+  }
+
+  /* Adjust other styles as needed for smaller screens */
+}
+
+/* Media queries for even smaller screens */
+@media (max-width: 768px) {
+  .login {
+    font-size: 12px; /* Further adjust font size for small screens */
+  }
+
+  .loginTitle {
+    font-size: 30px;
+  }
+
+  /* Further adjustments for small screens */
+}
+
+/* Media queries for very small screens */
+@media (max-width: 480px) {
+  .login {
+    font-size: 10px; /* Further adjust font size for very small screens */
+  }
+
+  .loginTitle {
+    font-size: 24px;
+  }
+}

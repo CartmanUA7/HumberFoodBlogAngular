@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* @import '~@fortawesome/fontawesome-free/css/all.css'; */
+
+body {
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+}
+
+.footer {
+  background-color: #24262b;
+  padding: 70px 0;
+}
+
+.footer-col {
+  flex: 1; /* Use flex property to evenly distribute columns */
+  padding: 0 20px;
+  text-align: center;
+  min-width: 25%; /* Add a minimum width to ensure it doesn't become too narrow */
+  width: 25%;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 97px;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+.describ {
+  color: white;
+}
+
+.form-input {
+  margin-top: 5px;
+  width: 200px;
+  padding: 8px;
+  font-size: 18px;
+}
+
+button {
+  padding: 7px 10px;
+  font-size: 20px;
+}
+
+/* Add responsive styles for medium-sized screens (up to 768px width) */
+@media (max-width: 768px) {
+  .footer-col {
+    flex: 1; /* Use flex property for responsiveness */
+    min-width: 50%; /* Add a minimum width to ensure it doesn't become too narrow */
+    width: 50%;
+  }
+}
+
+/* Add responsive styles for smaller screens (up to 576px width) */
+@media (max-width: 576px) {
+  .footer-col {
+    flex: 1; /* Use flex property for responsiveness */
+    min-width: 100%; /* Add a minimum width to ensure it doesn't become too narrow */
+    width: 100%;
+  }
+}

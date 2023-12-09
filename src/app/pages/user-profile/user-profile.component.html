@@ -1,0 +1,65 @@
+<div class="user">
+  <div class="userWrapper">
+    <div class="userTitle">
+      <span class="userTitleUpdate">Update Your Account</span>
+      <span class="userTitleDelete" (click)="handleDeleteUser()">
+        Delete Account
+      </span>
+    </div>
+
+    <form class="userForm" (submit)="handleSubmit()">
+      <label>Profile Picture</label>
+      <div class="userPP">
+        <img
+          src="https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+          alt=""
+        />
+        <label for="fileInput">
+          <span class="writeIcon">+</span>
+        </label>
+        <input
+          id="fileInput"
+          type="file"
+          style="display: none;"
+          class="userPPInput"
+        />
+      </div>
+       <label>First Name</label>
+      <input
+        type="text"
+        placeholder="{{ userData.firstName }}"
+        name="firstName"
+        [(ngModel)]="userData.firstName"
+        (input)="handleInputChange($event)"
+      />
+      <label>Last Name</label>
+      <input
+        type="text"
+        placeholder="{{ userData.lastName }}"
+        name="lastName"
+        [(ngModel)]="userData.lastName"
+        (input)="handleInputChange($event)"
+      />
+       <label>Email</label>
+      <input
+        type="email"
+        placeholder="{{ userData.email }}"
+        name="email"
+        [disabled]="true"
+        [(ngModel)]="userData.email"
+        (input)="handleInputChange($event)"
+      /> 
+      <label>Password</label>
+      <input
+        type="password"
+        placeholder="{{ userData.password }}"
+        name="password"
+        [(ngModel)]="userData.password"
+        (input)="handleInputChange($event)"
+      />
+      <button type="submit" class="userSubmitButton">
+        Update
+      </button> 
+    </form>
+  </div>
+</div>

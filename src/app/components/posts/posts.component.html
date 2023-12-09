@@ -1,0 +1,7 @@
+<div class="posts">
+  <app-post *ngFor="let post of filterPostsByCategory(data || [], selectedCategory)"
+    [post]="post"
+    >
+  </app-post>
+  
+</div>

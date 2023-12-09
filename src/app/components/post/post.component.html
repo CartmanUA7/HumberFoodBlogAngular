@@ -1,0 +1,15 @@
+<div class="post">
+  <img class="postImg" [src]="post.image" alt="">
+  <div class="postInfo">
+    <div class="postCats">{{ post.categories }}</div>
+    <span class="postTitle" (click)="navigateToPost()">
+      {{ post.title }}
+    </span>
+    <div class='postId'>
+      <p>Author: {{ post.authorName }}</p>
+    </div>
+    <hr />
+    <span class="postDate">{{ parsedDate }}</span>
+  </div>
+  <p class="postDesc">{{ post.content }}</p>
+</div>

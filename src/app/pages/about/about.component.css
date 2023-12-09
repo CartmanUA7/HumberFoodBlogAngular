@@ -1,0 +1,99 @@
+/* Set the box-sizing property for all elements */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* Define the mainHeading styles */
+.mainHeading {
+  margin-top: 3em;
+  margin-left: 15em;
+  margin-bottom: 2em;
+}
+
+/* Set margin for h2 element */
+h2 {
+  margin-left: 4em;
+}
+
+/* Create a flex container for the rows */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Spacing between columns */
+}
+
+/* Define column styles */
+.column {
+  flex: 1;
+  min-width: 30%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+/* Set a maximum width for the images */
+.imgClass {
+  width: 56%;
+ 
+}
+
+/* Add a media query for responsiveness */
+@media screen and (max-width: 650px) {
+  /* Change the flex direction to stack columns on top of each other */
+  .row {
+    flex-direction: column;
+  }
+
+  /* Reset margins for center alignment on smaller screens */
+  .mainHeading, h2 {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* Adjust image width and margin for smaller screens */
+  .imgClass {
+    width: 80%; /* Adjust as needed */
+    margin: 0 auto;
+  }
+
+  /* Reset the button width for better display on small screens */
+  .button {
+    width: auto;
+  }
+}
+
+/* Card and container styles */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 100%; /* Ensure card fits its container */
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Title and button styles */
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}

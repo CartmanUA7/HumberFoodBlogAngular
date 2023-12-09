@@ -1,0 +1,8 @@
+<app-header></app-header>
+<div class="home">
+  <app-posts [data]="posts" [selectedCategory]="selectedCategory"></app-posts>
+  <app-sidebar
+    [posts]="posts"
+    [(selectedCategory)]="selectedCategory"
+  ></app-sidebar>
+</div>

@@ -1,0 +1,82 @@
+<div class="write">
+  <img class="writeImg" [src]="imageUrl" alt="" />
+  @if (user) {
+  <form class="writeForm" [formGroup]="writeForm" (ngSubmit)="onSubmit()">
+    <div class="writeFormGroup">
+      <label class="writeUpload" for="fileInput">
+        <p class="writeIcon fa fa-plus"></p>
+      </label>
+      <input
+        required
+        id="fileInput"
+        type="file"
+        accept=".png,.jpg"
+        style="display: none"
+        (change)="onSelect($event)"
+      />
+      <ng-container *ngIf="writeForm.get('fileInput')?.value">
+        <strong>{{ writeForm.get("fileInput")?.value }}</strong>
+      </ng-container>
+      <ng-container *ngIf="!writeForm.get('fileInput')?.value">
+        <strong>Upload Image</strong>
+      </ng-container>
+    </div>
+    <div class="writeFormGroup">
+      <input
+        id="title"
+        class="writeInput"
+        placeholder="Title"
+        type="text"
+        formControlName="title"
+        autofocus="true"
+      />
+    </div>
+    <span
+      *ngIf="writeForm.get('title')?.invalid && writeForm.get('title')?.touched"
+      class="writeError"
+      role="alert"
+    >
+      Field is required
+    </span>
+    <div class="writeFormGroup">
+      <select class="writeInputSelector" formControlName="categories">
+        <option value="Mexican Food">Mexican Food</option>
+        <option value="Italian Food">Italian Food</option>
+        <option value="Indian Food">Indian Food</option>
+        <option value="Chinese Food">Chinese Food</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+    <span
+      *ngIf="
+        writeForm.get('categories')?.invalid &&
+        writeForm.get('categories')?.touched
+      "
+      class="writeError"
+      role="alert"
+    >
+      Field is required
+    </span>
+    <div class="writeFormGroup">
+      <textarea
+        id="content"
+        class="writeInput writeText"
+        placeholder="Tell your story..."
+        formControlName="content"
+      ></textarea>
+    </div>
+    <span
+      *ngIf="
+        writeForm.get('content')?.invalid && writeForm.get('content')?.touched
+      "
+      class="writeError"
+      role="alert"
+    >
+      Field is required
+    </span>
+    <input value="Publish" class="writeSubmit" type="submit" />
+  </form>
+  } @else {
+    <div class="writeFormGroup writeInput">Please log in first</div>
+  }
+</div>

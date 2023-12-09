@@ -1,0 +1,14 @@
+<div class="newCommentWrapper">
+  <h3>Add Comment:</h3>
+  <form [formGroup]="newCommentForm" (ngSubmit)="onSubmit()">
+    <textarea
+      id="content"
+      cols="40"
+      rows="5"
+      name="content"
+      formControlName="content"
+      required
+    ></textarea>
+    <button type="submit">Submit</button>
+  </form>
+</div>

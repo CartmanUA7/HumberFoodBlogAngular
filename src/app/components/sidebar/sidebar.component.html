@@ -1,0 +1,31 @@
+<div class="sidebar">
+  <div class="sidebarItem">
+    <span class="sidebarTitle">ABOUT ME</span>
+    <img src="https://i0.wp.com/blog.ericturner.it/wp-content/uploads/2019/03/cropped-myAvatar.png?fit=512%2C512&ssl=1" alt="" />
+    <p>
+      Laboris sunt aute cupidatat velit magna velit ullamco dolore mollit
+      amet ex esse. Sunt eu ut nostrud id quis proident.
+    </p>
+  </div>
+  <div class="sidebarItem">
+    <span class="sidebarTitle">CATEGORIES</span>
+    <ul class="sidebarList">
+      @for (category of categories; track $index) {
+        <li class="sidebarListItem">
+          <a class="linkItem" [routerLink]="['/posts']" [queryParams]="{ cat: category }" (click)="handleCategoryClick(category)">
+            {{ category }}
+          </a>
+        </li>
+      }
+    </ul>
+  </div>
+  <div class="sidebarItem">
+    <span class="sidebarTitle">FOLLOW US</span>
+    <div class="sidebarSocial">
+      <i class="sidebarIcon fab fa-facebook-square"></i>
+      <i class="sidebarIcon fab fa-instagram-square"></i>
+      <i class="sidebarIcon fab fa-pinterest-square"></i>
+      <i class="sidebarIcon fab fa-twitter-square"></i>
+    </div>
+  </div>
+</div>

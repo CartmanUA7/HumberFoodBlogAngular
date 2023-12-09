@@ -1,0 +1,43 @@
+<div class="singlePost">
+  <div class="singlePostWrapper">
+    <img
+      class="singlePostImg"
+      [src]='post?.image'
+      alt=""
+    />
+    <h1 class="singlePostTitle">
+      {{ post?.title }}
+      @if (user && post && user._id == post.author) {
+      <div class="singlePostEdit">
+          <div class="singlePostIcon fa fa-edit" (click)="navigateToEdit()"></div>
+          <div class="singlePostIcon fa fa-trash-alt" (click)="openDeleteDialog()"></div>
+      </div>
+      }
+    </h1>
+    <div class="singlePostInfo">
+      <span>
+        Author:
+        <b class="singlePostAuthor">
+            {{ post?.authorName }}
+        </b>
+      </span>
+      <span>{{ parsedDate }}</span>
+    </div>
+    <p class="singlePostDesc">
+      {{ post?.content }}
+    </p>
+    <div class="singlePostLikes">
+      <p class='singlePostLikeIcon fa fa-heart' [ngClass]="liked" (click)="handleLike()"></p>
+      <p>{{ post && post.likes ? post.likes.length : 0 }}</p>
+    </div>
+  </div>
+  <div class="singlePostComments">
+    <h3 class="singlePostCommentsLabel">Comments:</h3>
+    @for (comment of post?.comments; track $index) {
+      <app-comment [postID]="post!._id" [comment]="comment" />
+    }
+    @if (user) {
+    <app-new-comment [postId]="post!._id" />
+    }
+  </div>
+</div>

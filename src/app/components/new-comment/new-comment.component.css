@@ -1,0 +1,25 @@
+.newCommentWrapper {
+  padding: 20px 20px 0 20px;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+  overflow: scroll;
+}
+
+textarea::-webkit-scrollbar {
+  display: none;
+}
+
+button {
+  color: white;
+  background-color: teal;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
